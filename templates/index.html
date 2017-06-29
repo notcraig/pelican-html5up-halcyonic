@@ -10,6 +10,7 @@
             </header>
 
             {{ article.content| striptags|truncate(250)}} (<a class = "red" href="{{article.url}}">Continue Reading</a>)
+<hr>
     {% endfor %}
 {% include "pagination.html" %}
 {% endblock content %}
