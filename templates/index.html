@@ -8,9 +8,8 @@
             <h4>Published on {{ article.date | strftime('%B')  }} {{ article.date.day |ordinal() }}, {{ article.date | strftime('%Y')  }}</h4>
 
             </header>
-            <p>
+            
             {{ article.content| striptags|truncate(250)}} (<a class = "red" href="{{article.url}}">Continue Reading</a>)
-            </p>
     {% endfor %}
 {% include "pagination.html" %}
 {% endblock content %}
